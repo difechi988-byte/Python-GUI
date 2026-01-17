@@ -1,0 +1,22 @@
+import tkinter as tk
+
+def show():
+    result.config(text=name.get() + " is travelling to " + place.get())
+
+w = tk.Tk()
+w.title("Plane Ticket")
+
+tk.Label(w, text="Name").pack()
+name = tk.Entry(w)
+name.pack()
+
+tk.Label(w, text="Destination").pack()
+place = tk.Entry(w)
+place.pack()
+
+tk.Button(w, text="Show Ticket", command=show).pack()
+
+result = tk.Label(w, text="")
+result.pack()
+
+w.mainloop()
